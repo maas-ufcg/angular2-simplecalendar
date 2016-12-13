@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Event } from '../event';
 
 @Component({
   selector: 'app-day',
@@ -6,17 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./day.component.scss']
 })
 export class DayComponent implements OnInit {
-  events: any[] = [
-    {"id": 1, "title": "Test", "description": "Test Event"}
-  ];
 
-  dayNumber: number;
+  @Input() day;
+  id: number;
+  events: Event[];
 
   constructor() { }
 
-  ngOnInit() {
-    //Tests only.
-    this.dayNumber = 1;
+  ngOnInit(){
+    this.id = this.day.id;
+    this.events = this.day.events;
   }
 
 }

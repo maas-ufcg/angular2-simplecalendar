@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "events":[
+      {"id":1, "title": "Test", "description": "Test event"}
+    ]
+  },
+  {
+    "id": 2,
+    "events":[
+      {"id":1, "title": "Test", "description": "Test event"}
+    ]
+  }
+]

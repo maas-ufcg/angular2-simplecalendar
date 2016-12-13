@@ -4,5 +4,7 @@
     <p class="forward">&#8594;</p>
   </div>
 
-  <app-day class="day"></app-day>
+  <div class="days" *ngFor="let day of days">
+    <app-day [day]="day"></app-day>
+  </div>
 </div>
