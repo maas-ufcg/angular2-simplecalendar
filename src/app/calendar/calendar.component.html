@@ -4,7 +4,7 @@
     <p class="forward">&#8594;</p>
   </div>
 
-  <div class="days" *ngFor="let day of days">
+  <md-grid-list class="days" cols="{{days.length}}" *ngFor="let day of days">
     <app-day [day]="day" [routerLink]="['/days/' + day.id]"></app-day>
-  </div>
+  </md-grid-list>
 </div>
