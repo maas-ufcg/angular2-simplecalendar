@@ -9,7 +9,9 @@ import { CalendarService } from '../services/calendar.service';
 })
 export class CalendarComponent implements OnInit {
 
+  months = [];
   days = [];
+  defaultMonth = 0;
 
   constructor(
     private calendarService: CalendarService
@@ -17,9 +19,10 @@ export class CalendarComponent implements OnInit {
 
   ngOnInit() {
     this.calendarService
-    .getDays()
+    .getMonths()
     .subscribe(data => {
-      this.days = data;
+      this.months = data;
+      this.days = this.months[this.defaultMonth].days;
     });
   }
 

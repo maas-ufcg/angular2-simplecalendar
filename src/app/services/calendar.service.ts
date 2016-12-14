@@ -6,6 +6,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class CalendarService {
   private daysUrl = '../../assets/days.json';
+  private monthsUrl = '../../assets/days.json';
 
   constructor(
     private http: Http
@@ -13,6 +14,11 @@ export class CalendarService {
 
   getDays() {
     return this.http.get(this.daysUrl)
+    .map((res: Response) => res.json());
+  }
+
+  getMonths() {
+    return this.http.get(this.monthsUrl)
     .map((res: Response) => res.json());
   }
 
