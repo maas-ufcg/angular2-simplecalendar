@@ -1,10 +1,32 @@
-<div class="calendar">
-  <div class="month-navigation">
-    <p class="backward">&#8592;</p>
-    <p class="forward">&#8594;</p>
-  </div>
-
-  <md-grid-list class="days" cols="{{days.length}}" *ngFor="let day of days">
-    <app-day [day]="day" [routerLink]="['/days/' + day.id]"></app-day>
-  </md-grid-list>
+<!-- <div class="calendar"> -->
+<!--   <div class="month&#45;navigation"> -->
+<!--     <p class="backward">&#38;#8592;</p> -->
+<!--     <p class="forward">&#38;#8594;</p> -->
+<!--   </div> -->
+<!--  -->
+<!--   <md&#45;grid&#45;list class="days" cols="{{days.length}}" *ngFor="let day of days"> -->
+<!--     <app&#45;day [day]="day" [routerLink]="['/days/' + day.id]"></app&#45;day> -->
+<!--   </md&#45;grid&#45;list> -->
+<!-- </div> -->
+<div class="month"> 
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li class="title">
+      <!-- Get the current month. -->
+      {{this.monthString(this.date.getMonth())}}
+      <br>
+      <span style="font-size:12px">{{this.date.getFullYear()}}</span>
+    </li>
+  </ul>
 </div>
+
+<ul class="weekdays">
+  <li *ngFor="let wDay of weekDaysNames">{{wDay}}</li>
+</ul>
+
+<ul class="days"> 
+  <li *ngFor="let day of wDays" (click)="onClick(day)" [style.color]="hasEvent(day)" [class]="'day'">
+    {{day.getDate()}}
+  </li>
+</ul>

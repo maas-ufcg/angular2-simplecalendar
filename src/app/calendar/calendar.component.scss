@@ -1,17 +1,75 @@
-.backward {
-  float: left;
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+    padding: 10px 0px;
+    width: 100%;
+    background: gray;
 }
 
-.forward {
-  float:left;
+.month ul {
+    margin: 0 2px;
+    padding: 0;
 }
 
-.month-navigation {
-  vertical-align: top;
+.month ul li {
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+    padding-left: 3px;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+    padding-right: 1px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 0px;
+    background-color: gray;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.8%;
+    margin: 5px 0;
+    color: gray;
+    text-align: center;
 }
 
 .days {
-  float: left;
-  margin-top: 50px;
-  margin-right: 40px;
+    padding: 10px 0;
+    background: white;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: gray;
+}
+
+.day {
+  cursor: pointer;
+}
+
+.day:hover {
+  border-radius: 2px;
+  background-color: gray;
+}
+
+.title {
+  text-align: center;
 }
