@@ -7,18 +7,11 @@ import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { CalendarComponent } from './calendar/calendar.component';
-import { DayComponent } from './day/day.component';
-import { CalendarService } from './services/calendar.service';
-import { EventDetailComponent } from './event-detail/event-detail.component';
-import { DayDetailComponent } from './day-detail/day-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalendarComponent,
-    DayComponent,
-    EventDetailComponent,
-    DayDetailComponent
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +20,7 @@ import { DayDetailComponent } from './day-detail/day-detail.component';
     CalendarRoutingModule,
     MaterialModule.forRoot()
   ],
-  providers: [
-    CalendarService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
