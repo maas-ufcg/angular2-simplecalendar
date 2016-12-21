@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Event } from '../components/event';
 
 
@@ -14,9 +13,7 @@ export class CalendarComponent implements OnInit {
   private dayNames = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
   private monthDays = [];
 
-  constructor(
-    private router: Router
-  ) { }
+  constructor() { }
 
   ngOnInit() {
     let currentMonth = this.date.getMonth();
@@ -42,7 +39,7 @@ export class CalendarComponent implements OnInit {
     return days;
   }
 
-  private monthString(month) {
+  private getMonthString(month) {
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     return months[month];
   }
