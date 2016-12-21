@@ -3,7 +3,6 @@
     <li class="prev">&#10094;</li>
     <li class="next">&#10095;</li>
     <li class="title">
-      <!-- Get the current month. -->
       {{this.monthString(this.date.getMonth())}}
       <br>
       <span style="font-size:12px">{{this.date.getFullYear()}}</span>
@@ -12,7 +11,7 @@
 </div>
 
 <ul class="weekdays">
-  <li *ngFor="let name of dayNames">{{wDay}}</li>
+  <li *ngFor="let name of dayNames">{{name}}</li>
 </ul>
 
 <ul class="days"> 
